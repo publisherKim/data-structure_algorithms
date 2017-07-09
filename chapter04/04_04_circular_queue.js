@@ -33,7 +33,11 @@ function hotPotato(nameList, num) {
             queue.enqueue(queue.dequeue()); // 맨앞의 원소를 꺼내어 맨 뒤에 넣는다.
         }
         eliminated = queue.dequeue(); // num 개수만큼 원소를 뒤로 돌리고 맨앞의 원소를 제거한다.
-        console.log(elimanted + '을(를) 뜨거운 감자에서 퇴장한다.');
+        console.log(eliminated + '을(를) 뜨거운 감자에서 퇴장한다.');
     }
     return queue.dequeue(); // 마지막막에 남은 원소를 반환한다.
 }
+
+var names = ['John', 'Jack', 'Camila', 'Ingrid', 'Carl'];
+var winner = hotPotato(names, 7);
+console.log(winner);
